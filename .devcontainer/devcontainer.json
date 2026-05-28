@@ -1,0 +1,23 @@
+{
+  "name": "RTDApi - Windows",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8-windowsservercore-ltsc2022",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "remoteUser": "ContainerAdministrator",
+  "mounts": [],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "dotnet.server.useOmnisharp": false
+      }
+    }
+  },
+  "postCreateCommand": "dotnet --version && git --version"
+}
